@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Chart the Stock Market</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--fonts-->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika|Merriweather+Sans:b|Droid+Sans:b|Yellowtail|Karla:i|Orbitron:b&effect=ice">
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">        
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/s_c/styles.css">
+        <!--JS frameworks-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+        <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script> 
+        <!--Controllers-->
+        
+    </head>
+    <body ng-app="mainApp">
+        <header>
+            <h1 class="title">Stock Chart</h1>
+        </header>
+        <ui-view></ui-view>
+        <script src="/s_c/client/controllers/app_registration.js"></script>
+        <script src="/s_c/client/controllers/mainCtrl.js"></script>
+        <script src="/s_c/client/controllers/ui-router_registration.js"></script>
+        
+        <script src="/s_c/client/services/my_socket_service.js"></script>
+        <script src="/s_c/client/services/my_stock_service.js"></script>
+        
+        <footer>
+            <div>Created by <strong><a href="/home" style="text-decoration: none" target="_blank">QIAOCHU WANG</a></strong></div>
+        </footer>
+
+    </body>
+</html>

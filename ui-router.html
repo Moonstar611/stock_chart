@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="container">
+
+    <div id="stock_chart"></div>
+    <div ng-class="stocksBox">
+        <div ng-repeat="stock in stocks" class="col-sm-3 col-lg-3 box">
+            <h2>{{stock.dataset.dataset_code}}<button ng-click="removeStock($index)" class="btn btn-danger"  title="Remove this stock"><i class="glyphicon glyphicon-remove"></i></button></h2>
+            <h3>{{stock.dataset.name}}</h3>
+        </div>
+        <div  class="col-sm-3 col-lg-3 box">
+            <h4>Sync with all users at real time:</h4>
+            <div class="input-group">
+                <input type="text" class="form-control" id="addCode" placeholder="Stock Code" ng-model="stockCode">
+                <button class="btn btn-info" title="Add this stock" ng-click="addStock()">ADD</button>
+            </div>
+            <div ng-show="showErr">
+                <p class="error">{{errInfo}}</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

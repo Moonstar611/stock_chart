@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Author     : McGradroy
+*/
+body{
+    background-color: #303030;
+    padding-top:20px;
+}
+
+.title{
+    font-family:"Orbitron", sans-serif;
+    font-size:84px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.container{
+    min-width: 600px;
+    width:1200px;
+    margin-left:auto;
+}
+.container #stock_chart{
+    height:500px;
+}
+
+.box{
+    height : 120px;
+    border: 3px solid black;
+    margin-bottom : 10px;
+    border-left:6px solid green;
+    border-radius: 10px;
+}
+.box:hover{
+    border-left:6px solid red;
+    cursor:pointer;
+}
+.box h2{
+    color: #E0E0E3;
+    font-family: "Orbitron", sans-serif;
+    font-size:35px;
+    margin-top: 10px;
+}
+
+.box h2 button{
+    float:right;
+}
+.box h3{
+    color: white;
+    font-family: Signika, sans-serif;
+    font-size:15px;
+    margin-top:5px;
+}
+.box h4{
+    font-size:18px;
+    color:white;
+    margin-top:20px;
+}
+.box .input-group{
+    margin-top:20px;
+}
+.box .input-group #addCode{
+    width:70%;
+}
+.box .input-group button{
+    width:30%;
+}
+.error{
+    font-size: 15px;
+    color: white;
+}
+footer{
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top:50px;
+}
+footer div{
+    color:#ffffff;
+    font-family: "Droid Sans";
+    font-size: 15px;
+}
+footer div a{
+    font-family: "Yellowtail";
+    color:#ffffff;
+}
