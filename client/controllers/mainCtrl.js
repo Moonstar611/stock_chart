@@ -82,9 +82,17 @@ function mainCtrl($scope, myStockService, mySocketService, $state) {
             socketID: mySocketService.getSocketID()
         }).$promise
                 .then(function (data) { //the just-added stock data from server
-                    if (data.hasOwnProperty("quandl_error")) {
+                    if (data.hasOwnProperty("stock_exists")) {
                         $scope.showErr = true;
-                        $scope.errInfo = data.quandl_error;
+                        $scope.errInfo = data.err;
+                        return;
+                    }else if(data.hasOwnProperty("quandl_error")){
+                        $scope.showErr = true;
+                        if(data.quandl_error.message=="You have submitted an incorrect Quandl code. Please check your Quandl codes and try again."){
+                            $scope.errInfo = "This Code Does Not Match Any Stock";
+                            return;
+                        }
+                        $scope.errInfo = data.err;
                         return;
                     }
                     console.log("The data of the just-added stock is received from server: ", data);

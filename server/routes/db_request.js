@@ -73,7 +73,7 @@ module.exports = function (app) {
 
             } else {
                 return res.json({
-                    quandl_error: "You already added this stock"});
+                    stock_exists: "You already added this stock"});
             }
 
         });
