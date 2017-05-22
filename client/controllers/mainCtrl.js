@@ -84,7 +84,7 @@ function mainCtrl($scope, myStockService, mySocketService, $state) {
                 .then(function (data) { //the just-added stock data from server
                     if (data.hasOwnProperty("stock_exists")) {
                         $scope.showErr = true;
-                        $scope.errInfo = data.err;
+                        $scope.errInfo = data.stock_exists;
                         return;
                     }else if(data.hasOwnProperty("quandl_error")){
                         $scope.showErr = true;
